@@ -202,6 +202,14 @@ article img.feature-img{
 /* login page */
 #login-wrapper{
 	margin-bottom: 30px;
+	min-height: 700px; 
+}
+
+#login-wrapper a{
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	margin-left: 20px;
 }
 
 footer{

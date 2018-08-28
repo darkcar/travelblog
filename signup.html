@@ -22,10 +22,10 @@
 		</div>
 	</header>
 	<main>
-		<h1>Login</h1>
+		<h1>Register</h1>
 		<section>
 			<div id="login-wrapper">
-				<form action="auth/login.php" method="post">
+				<form action="auth/signup.php" method="post">
 					<div class="form-group">
 						<lable for="username">Username:</lable>
 						<input type="text" id="username" name="userName" placeholder="Your username...">
@@ -34,8 +34,11 @@
 						<lable for="password">Password:</lable>
 						<input type="password" id="password" name="passWord" placeholder="Your password...">
 					</div>
-					<button type="submit" class="btn-success">Login</button>
-					<a href="signup.html">New user?</a>
+					<div class="form-group">
+						<lable for="comfirmpwd">Confirm Password:</lable>
+						<input type="password" id="comfirmpwd" name="re-passWord" placeholder="Confirm your password...">
+					</div>
+					<button type="submit" class="btn-success">Register</button>
 				</form>
 			</div>
 		</section>

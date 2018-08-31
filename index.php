@@ -22,7 +22,7 @@
         	echo "<br> id: ". $row["postId"]. " - Name: ". $row["postTitle"]. " " . $row["postUrl"] . "<br>";
     	}
 	} else {
-    	echo "0 results";
+    	// echo "0 results";
 	}
 
 	$conn->close();
@@ -45,7 +45,7 @@
 			<p id="brandname"><i class="fa fa-plane-departure"></i> <a href="./">TravelBlog</a></p>
 			<nav>
 				<ul>
-					<li><a href="post.html">New Post</a></li>
+					<li><a href="post.php">New Post</a></li>
 					<li><a href="login.html">Login</a></li>
 				</ul>
 			</nav>

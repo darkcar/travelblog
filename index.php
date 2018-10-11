@@ -1,3 +1,33 @@
+<!-- PHP code -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "root";
+	$dbName = "test";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbName);
+
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+
+	$sql = "SELECT * FROM tb_posting";
+	$result = $conn -> query($sql);
+
+	if($result -> num_rows > 0){
+		 // output data of each row
+    	while($row = $result->fetch_assoc()) {
+        	echo "<br> id: ". $row["postId"]. " - Name: ". $row["postTitle"]. " " . $row["postUrl"] . "<br>";
+    	}
+	} else {
+    	// echo "0 results";
+	}
+
+	$conn->close();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +45,7 @@
 			<p id="brandname"><i class="fa fa-plane-departure"></i> <a href="./">TravelBlog</a></p>
 			<nav>
 				<ul>
-					<li><a href="post.html">New Post</a></li>
+					<li><a href="post.php">New Post</a></li>
 					<li><a href="login.html">Login</a></li>
 				</ul>
 			</nav>
